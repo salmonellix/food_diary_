@@ -4,13 +4,12 @@ from rest_framework import routers
 from . import views
 
 
-# router = routers.DefaultRouter()
-# router.register(r'products', views.ProductViewSet)
-# router.register(r'users', views.ProfileViewSet)
-# router.register(r'meals', views.MealViewSet)
-# router.register(r'days', views.DayViewSet)
+router = routers.DefaultRouter()
+router.register(r'products', views.ProductViewSet)
+router.register(r'users', views.ProfileViewSet)
+router.register(r'food_portions', views.FoodPortionViewSet)
 
 urlpatterns = [
-    # path('', include(router.urls))
+    path('', include(router.urls))
 ]
 
