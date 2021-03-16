@@ -1,0 +1,59 @@
+{% extends 'base.html' %}
+<head>
+
+</head>
+<body>
+
+	{% block header %}
+		<div class="left-column">
+			<img id="diary_pic" src="https://img.icons8.com/carbon-copy/2x/healthy-eating.png">
+
+
+		</div>
+
+		<div class="right-column">
+
+			<div class="about-me">
+			<h4>DAY</h4>
+
+				{% for date in day %}
+			<p>{{date}}</p>
+				{% endfor %}
+
+		</div>
+
+		</div>
+	{% endblock %}
+
+
+	{% block content %}
+
+		<a href=""></a>
+		<h3 style="text-align: center;">MEALS</h3>
+		<ul >
+		{% for meal in meals %}
+
+		<details class="details-example">
+		<summary ><a>{{meal}}</a></summary>
+		<ol id="ollist">
+		{% for product in meal.products.all %}
+		<li><a >{{product}}  </a>
+		<a style="font-size:10px;"> Amount [g/ml]: {{product.amount}} Calories(100g): {{product.calories}}
+		Proteins:{{product.proteins}}  Carbs:{{product.carbs}}  Fats:{{product.fats}}  </a>
+		<a>Calories :{{product.count_kcal}}</a>
+		<a href="{% url 'product-delete' id=meal.id rid=product.id%} "> ->remove<-</a></li>
+
+		{% endfor %}
+		</ol>
+		</details>
+
+		{% endfor %}
+		<h4 style="text-align: center;">Day intake: {{kcals}}</h4>
+		</ul>
+
+		<h5><br></h5>
+	{% endblock %}
+
+
+	<script type="text/javascript" src="script.js"></script>
+</body>

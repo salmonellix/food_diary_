@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+<head>
+	<script type="text/javascript" src="static/scripts.js"></script>
+</head>
+<body>
+
+	{% block header %}
+		<div class="left-column">
+			<img id="diary_pic" src="https://img.icons8.com/carbon-copy/2x/healthy-eating.png">
+
+
+		</div>
+
+		<div class="right-column">
+
+			<div class="about-me">
+			<h4>Add Product </h4>
+
+			<p>TO DATABASE</p>
+
+
+		</div>
+
+		</div>
+	{% endblock %}
+
+
+	{% block content %}
+
+		<a href=""></a>
+
+	<div id="form-wrapper">
+
+				<form id="form">
+					<div class="flex-wrapper">
+						<div style="flex: 6">
+
+                            <h5>ADD PRODUCT:</h5>
+							<input id="product-name" class="form-control" type="text" name="product-name" placeholder="product name">
+                            <input id="product-prot" class="form-control" type="text" name="product-prot" placeholder="proteins">
+                            <input id="product-carbs" class="form-control" type="text" name="product-carbs" placeholder="carbs">
+							<input id="product-fats" class="form-control" type="text" name="product-fats" placeholder="fats">
+							<input id="calories_100" class="form-control" type="text" name="calories_100" placeholder="calories/100g">
+							<input id="amount" class="form-control" type="text" name="amount" placeholder="amount">
+
+
+						</div>
+                        <div>
+							<input id="submit" class="btn" type="submit" value="ADD">
+						</div>
+						<button onclick="addItem()">Click me</button>
+
+					</div>
+				</form>
+			</div>
+
+	{% endblock %}
+
+
+
+</body>
