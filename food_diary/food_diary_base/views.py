@@ -1,16 +1,62 @@
+from django.contrib.auth.decorators import login_required
+from django.contrib.auth.mixins import LoginRequiredMixin
+from django.views.generic.list import ListView
 from django.shortcuts import render
 from rest_framework import filters, status
 from rest_framework import viewsets
 from rest_framework.decorators import api_view
 from rest_framework.response import Response
 # from food_diary_api.models import Meal, Profile, Product, Day
+from django.contrib.auth import authenticate, login, logout
 #
 # from food_diary_api.serializers import ProductSerializer
+from django.views.generic import TemplateView
+
+from food_diary_api.models import FoodPortion
 
 
 def home(request):
 
     return render(request, 'index.html')
+
+# @login_required
+class HomeView(TemplateView):
+    template_name = 'index.html'
+
+
+def login_view(request):
+    username = request.POST['username']
+    password = request.POST['password']
+    user = authenticate(request, username=username, password=password)
+    if user is not None:
+        login(request, user)
+        # Redirect to a success page.
+        ...
+    else:
+        # Return an 'invalid login' error message.
+        return render(request, 'log_in.html')
+
+def logout_view(request):
+    logout(request)
+    # Redirect to a success page.
+
+
+
+class UserDatesListView(LoginRequiredMixin,ListView):
+    model = FoodPortion
+    template_name = 'diary.html'
+
+    def get_queryset(self):
+        return FoodPortion.objects.filter(profile = self.request.user.id).values('date','id').order_by('date')
+
+
+class UserDayListView(LoginRequiredMixin,ListView):
+    model = FoodPortion
+    template_name = 'day.html'
+
+    def get_queryset(self):
+        return FoodPortion.objects.filter(profile = self.request.user.id).order_by('meal_type')
+
 
 # def diary(request):
 #     days = Day.objects.all()

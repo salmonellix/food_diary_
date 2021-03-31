@@ -27,27 +27,15 @@
 
 
 			<div class="intro-wrapper">
-				<div class="nav-wrapper">
 
-					<!-- Link around dots-wrapper added after tutorial video -->
-
-
-					<ul id="navigation">
-						<li><a href="{% url 'home' %}">Home</a></li>
-					</ul>
-					<ul id="navigation">
-						<li><a href="{% url 'diary' %}">Diary</a></li>
-					</ul>
-					<ul id="navigation">
-						<li><a href="">Add Product</a></li>
-					</ul>
-					<ul id="navigation">
-						<li><a href="">Log in</a></li>
-					</ul>
-				</div>
 
 				{% block header %}
             	{% endblock %}
+				{% if user.is_authenticated %}
+    <p>Welcome, {{ user.username }}. Thanks for logging in.</p>
+{% else %}
+    <p>Welcome, new user. Please log in.</p>
+{% endif %}
 
 
 				</div>

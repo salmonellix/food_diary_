@@ -28,30 +28,47 @@
 
 	{% block content %}
 
-		<a href=""></a>
-		<h3 style="text-align: center;">MEALS</h3>
-		<ul >
-		{% for meal in meals %}
+<!--		<a href=""></a>-->
+<!--		<h3 style="text-align: center;">MEALS</h3>-->
+<!--		<ul >-->
+<!--		{% for meal in meals %}-->
 
-		<details class="details-example">
-		<summary ><a>{{meal}}</a></summary>
-		<ol id="ollist">
-		{% for product in meal.products.all %}
-		<li><a >{{product}}  </a>
-		<a style="font-size:10px;"> Amount [g/ml]: {{product.amount}} Calories(100g): {{product.calories}}
-		Proteins:{{product.proteins}}  Carbs:{{product.carbs}}  Fats:{{product.fats}}  </a>
-		<a>Calories :{{product.count_kcal}}</a>
-		<a href="{% url 'product-delete' id=meal.id rid=product.id%} "> ->remove<-</a></li>
+<!--		<details class="details-example">-->
+<!--		<summary ><a>{{meal}}</a></summary>-->
+<!--		<ol id="ollist">-->
+<!--		{% for product in meal.products.all %}-->
+<!--		<li><a >{{product}}  </a>-->
+<!--		<a style="font-size:10px;"> Amount [g/ml]: {{product.amount}} Calories(100g): {{product.calories}}-->
+<!--		Proteins:{{product.proteins}}  Carbs:{{product.carbs}}  Fats:{{product.fats}}  </a>-->
+<!--		<a>Calories :{{product.count_kcal}}</a>-->
+<!--		<a href="{% url 'product-delete' id=meal.id rid=product.id%} "> ->remove<-</a></li>-->
 
-		{% endfor %}
-		</ol>
-		</details>
+<!--		{% endfor %}-->
+<!--		</ol>-->
+<!--		</details>-->
 
-		{% endfor %}
-		<h4 style="text-align: center;">Day intake: {{kcals}}</h4>
-		</ul>
+<!--		{% endfor %}-->
+<!--		<h4 style="text-align: center;">Day intake: {{kcals}}</h4>-->
+<!--		</ul>-->
 
 		<h5><br></h5>
+
+	{% if foodportion_list %}
+    <ul>
+
+      {% for day in foodportion_list %}
+        <a >{{day.meal_type}}</a>
+		<a >{{day.product}}</a>
+      </li>
+      {% endfor %}
+    </ul>
+
+    {% else %}
+      <p>No information to show</p>
+    {% endif %}
+
+
+
 	{% endblock %}
 
 

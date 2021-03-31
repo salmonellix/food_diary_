@@ -40,6 +40,20 @@
 
 	<h5><br></h5>
 
+
+	{% if foodportion_list %}
+    <ul>
+
+      {% for day in foodportion_list %}
+        <a href="{% url 'day' day.id %}">{{day.date}}</a>
+      </li>
+      {% endfor %}
+    </ul>
+
+    {% else %}
+      <p>No information to show</p>
+    {% endif %}
+
 	{% endblock %}
 
 
