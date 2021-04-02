@@ -5,13 +5,9 @@
 <body>
 
 				{% block header %}
-				<div class="left-column">
+				<div  class="left-column">
 					<img id="profile_pic" src="https://img.icons8.com/carbon-copy/2x/healthy-eating.png">
-					{% if user.is_authenticated %}
-						<p>Welcome, {{ user.username }}. Thanks for logging in.</p>
-					{% else %}
-						<p>Welcome, new user. Please log in.</p>
-					{% endif %}
+
 
 
 				</div>
@@ -19,6 +15,7 @@
 				<div class="right-column">
 
 					<div class="about-me">
+
 					<h4>ABOUT</h4>
 
 					<p>Food diary that allows you to easily control the amount of calories consumed during the day.</p>

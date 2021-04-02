@@ -15,10 +15,16 @@
 
 	<div class="right-column">
 
-		<div class="about-me">
+		<div class="head-content">
 		<h4>DIARY</h4>
 
 		<p>...</p>
+        {% if user.is_authenticated %}
+            <p >Welcome, {{ user.username }}.</p>
+            <p>Thanks for logging in.</p>
+        {% else %}
+            <p>Welcome, new user. Please log in.</p>
+        {% endif %}
 
 	</div>
 
@@ -28,21 +34,12 @@
 
 
 	{% block content %}
-	<a href=""></a>
-	<h3 style="text-align: center;">DAYS</h3>
-	<ul>
+        <h3 style="text-align: center;">DAYS</h3>
 
-		{% for day in days %}
-			<li style="text-align: center;"><a href="http://127.0.0.1:8000/day/{{day.id}}">{{day}}</a></li>
-		{% endfor %}
-
-	</ul>
-
-	<h5><br></h5>
 
 
 	{% if foodportion_list %}
-    <ul>
+    <ul style="text-align: center;">
 
       {% for day in foodportion_list %}
         <a href="{% url 'day' day.id %}">{{day.date}}</a>

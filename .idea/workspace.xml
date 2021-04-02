@@ -2,14 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02b38434-692a-48c2-9a11-cc2b334aa35b" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/food_diary/food_diary_base/templates/lol.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/food_diary/food_diary_base/templates/registration/login.html" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/food_diary/food_diary_base/templates/registration/logout.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/food_diary/food_diary_base/templates/day.html" beforeDir="false" afterPath="$PROJECT_DIR$/food_diary/food_diary_base/templates/day.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/food_diary/food_diary_base/templates/diary.html" beforeDir="false" afterPath="$PROJECT_DIR$/food_diary/food_diary_base/templates/diary.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/food_diary/food_diary_base/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/food_diary/food_diary_base/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food_diary/food_diary_base/urls.py" beforeDir="false" afterPath="$PROJECT_DIR$/food_diary/food_diary_base/urls.py" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food_diary/food_diary_base/views.py" beforeDir="false" afterPath="$PROJECT_DIR$/food_diary/food_diary_base/views.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -38,7 +33,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../movie_task/movie_task" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -58,6 +53,7 @@
       <updated>1615887269901</updated>
       <workItem from="1615887271096" duration="23719000" />
       <workItem from="1616240719797" duration="1973000" />
+      <workItem from="1617180686420" duration="6591000" />
     </task>
     <servers />
   </component>
