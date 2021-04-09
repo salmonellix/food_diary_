@@ -2,9 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="02b38434-692a-48c2-9a11-cc2b334aa35b" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/food_diary/food_diary_base/templates/day.html" beforeDir="false" afterPath="$PROJECT_DIR$/food_diary/food_diary_base/templates/day.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food_diary/food_diary_base/templates/diary.html" beforeDir="false" afterPath="$PROJECT_DIR$/food_diary/food_diary_base/templates/diary.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/food_diary/food_diary_base/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/food_diary/food_diary_base/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/vcs.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/docker-compose.yml" beforeDir="false" afterPath="$PROJECT_DIR$/docker-compose.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/food_diary/food_diary/settings.py" beforeDir="false" afterPath="$PROJECT_DIR$/food_diary/food_diary/settings.py" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,6 +43,9 @@
       <recent name="C:\Users\zelda\projects\docker_diary\food_diary_project\food_diary\food_diary_base" />
       <recent name="C:\Users\zelda\projects\docker_diary\food_diary_project\food_diary" />
     </key>
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="C:\Users\zelda\projects\docker_diary\food_diary_project\react-diary" />
+    </key>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
@@ -54,6 +58,10 @@
       <workItem from="1615887271096" duration="23719000" />
       <workItem from="1616240719797" duration="1973000" />
       <workItem from="1617180686420" duration="6591000" />
+      <workItem from="1617387680580" duration="1204000" />
+      <workItem from="1617613443237" duration="7498000" />
+      <workItem from="1617710335735" duration="2095000" />
+      <workItem from="1617799747449" duration="1023000" />
     </task>
     <servers />
   </component>
