@@ -42,7 +42,7 @@ class ProductViewSet(viewsets.ModelViewSet):
 
 class FoodPortionViewSet(viewsets.ModelViewSet):
     queryset = FoodPortion.objects.all().order_by('date')
-    serializer_class = ProfileSerializer
+    serializer_class = FoodPortionSerializer
     filter_backends = [filters.SearchFilter]
     search_fields = ['product', 'date', 'profile']
 

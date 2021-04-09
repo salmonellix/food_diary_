@@ -31,7 +31,7 @@ li a:hover {
 }
 
 div.jumbotron{
-    background: rgba(217, 217, 217, 0.84);
+    background: var(--mainColor);
 }
 
 a.button {

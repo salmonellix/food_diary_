@@ -48,4 +48,4 @@ class FoodPortion(models.Model):
     date = models.DateField(default='')
 
     def __str__(self):
-        return str(self.profile) + ' ' + str(self.date)
+        return str(self.product)
