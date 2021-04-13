@@ -47,15 +47,14 @@ class UserDatesListView(LoginRequiredMixin,ListView):
     template_name = 'diary.html'
 
     def get_queryset(self):
-        return FoodPortion.objects.filter(profile = self.request.user.id).values('date','id').order_by('date')
-
+        return FoodPortion.objects.filter(profile = self.request.user.id).values('date','id').order_by('date').distinct('date')
 
 class UserDayListView(LoginRequiredMixin,ListView):
     model = FoodPortion
     template_name = 'day.html'
 
     def get_queryset(self):
-        return FoodPortion.objects.filter(profile = self.request.user.id).order_by('meal_type')
+        return FoodPortion.objects.filter(profile = self.request.user.id).values('meal_type', 'product', 'amount').order_by('meal_type')
 
 
 # def diary(request):

@@ -53,13 +53,35 @@
 
 		<h5><br></h5>
 
+
+
+                <div class="jumbotron bg text-center text-center" id="container">
+
+
+
+
+    <div class="container">
+
+
+		<div id="task-container">
+            <div id="form-wrapper">
+
+
+
 	{% if foodportion_list %}
     <ul>
+        <a>BREAKFAST</a>
+      {% for portion in foodportion_list%}
 
-      {% for day in foodportion_list %}
-        <a >{{day.meal_type}}</a>
-		<a >{{day.product}}</a>
-      </li>
+          <li>
+
+          {% if portion.meal_type == "BREAKFAST" %}
+            <a >{{portion.product}} : {{portion.amount}}g</a>
+
+
+          {% endif %}
+
+            </li>
       {% endfor %}
     </ul>
 
@@ -67,10 +89,18 @@
       <p>No information to show</p>
     {% endif %}
 
+			</div>
+		</div>
+	</div>
+        </div>
 
 
 	{% endblock %}
 
 
-	<script type="text/javascript" src="script.js"></script>
+
+<script>
+    {% include 'static/scripts.js' %}
+
+</script>
 </body>

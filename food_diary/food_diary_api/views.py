@@ -47,3 +47,9 @@ class FoodPortionViewSet(viewsets.ModelViewSet):
     search_fields = ['product', 'date', 'profile']
 
 
+class StudentGradesListView(APIView):
+
+    def get(self, request, *args, **kwargs):
+        student: User = User.objects.get(studentID=kwargs['studentID'])
+        grades = Grade.objects.filter(student=student)
+        return Response(ExamGradesSerializer(grades, many=True).data)

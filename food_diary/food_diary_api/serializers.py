@@ -18,3 +18,4 @@ class FoodPortionSerializer(serializers.ModelSerializer):
         model = FoodPortion
         fields = '__all__'
 
+

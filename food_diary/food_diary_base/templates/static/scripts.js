@@ -216,13 +216,27 @@ function addItem(){
 
 
 }
+function openList1() {
+    var list = document.getElementById("ollist");
 
+    if (list.style.display === "none"){
+        list.style.display = "block";
+    }else{
+        list.style.display = "none";
+    }
+}
 
-function searchDay() {
-var wrapper = document.getElementById('list-wrapper-search');
-			//wrapper.innerHTML = ''
-			var searchTXT = document.getElementById("search").value;
-			var url = 'http://127.0.0.1:8000/exam/?search=' + searchTXT;
+function productInfo(product_id) {
+			var list = document.getElementById("ollist");
+
+			if (list.style.display === "none"){
+				list.style.display = "block";
+			}else{
+				list.style.display = "none";
+			}
+			var wrapper = document.getElementById('list-wrapper');
+
+			var url = 'http://127.0.0.1:8000/API/products/?search=' + product_id;
 
 			fetch(url)
 			.then((resp) => resp.json())
@@ -234,24 +248,17 @@ var wrapper = document.getElementById('list-wrapper-search');
 					var item = `
                     <div id="data-row-${i}" class="task-wrapper flex-wrapper">
                             <div style="flex:7">
-                            <span class=title"> Title: ${list[i].title}</span>
-                            <span class=title"> Description: ${list[i].description}</span>
-                            <span class=title"> Location: ${list[i].location}</span>
-                            <span class=title"> ID: ${list[i].id_exam}</span>
+                            <span class=title"> Name: ${list[i].product_name}</span>
+                            <span class=title"> Calories/100g: ${list[i].calories}</span>
+                            <span class=title"> Proteins: ${list[i].proteins}</span>
+                            <span class=title"> Carbs: ${list[i].carbs}</span>
+                            <span class=title"> Fats: ${list[i].fats}</span>
 
 
-                            </div>
-                            <div style="flex:1">
-                                <button class="btn edit">EDIT </button>
-                            </div>
-                             <div style="flex:1">
-                                <button class="btn delete" onclick="deleteItem(${list[i].id_exam})" >DELETE</button>
-                            </div>
-                             <div style="flex:1">
-                                <button class="btn delete" onclick="window.location.href='http://127.0.0.1:8000/front/examslist/grades/${list[i].id_exam}/'">GRADES</button>
                             </div>
                             </div>
                             </div>
 						`
 					wrapper.innerHTML += item
+			return item
 								}})}
